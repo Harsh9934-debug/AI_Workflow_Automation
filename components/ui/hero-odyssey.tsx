@@ -468,13 +468,7 @@ export const HeroSection: React.FC = () => {
                         animate="visible"
                         className="relative z-30 flex flex-col items-center text-center max-w-4xl mx-auto "
                     >
-                        <div className="mb-8">
-                            <ElasticHueSlider
-                                value={lightningHue}
-                                onChange={setLightningHue}
-                                label="Adjust Lightning Hue"
-                            />
-                        </div>
+                        
 
                         {/* Button: "Join us for free world" */}
                         <Link href="/sign-up">
@@ -484,7 +478,7 @@ export const HeroSection: React.FC = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="flex items-center space-x-2 px-4 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full text-sm mb-6 transition-all duration-300 group ring-1 ring-white/10 cursor-pointer" // Reduced mb slightly
                             >
-                                <span>Automate your future</span>
+                                <span>Automate your Work</span>
                                 <ArrowRight className="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform duration-300" />
                             </motion.button>
                         </Link>
