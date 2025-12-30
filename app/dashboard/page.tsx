@@ -1,6 +1,24 @@
-import { UserButton } from "@clerk/nextjs";
+"use client";
+
+import { UserButton, useUser } from "@clerk/nextjs";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { useEffect } from "react";
 
 export default function DashboardPage() {
+    const { user } = useUser();
+    const syncUser = useMutation(api.users.syncUser);
+
+    useEffect(() => {
+        if (user) {
+            syncUser({
+                name: user.fullName || user.firstName || "User",
+                email: user.primaryEmailAddress?.emailAddress || "",
+                imageUrl: user.imageUrl,
+            })
+        }
+    }, [user, syncUser]);
+
     return (
         <div className="flex flex-col min-h-screen">
             <header className="bg-white shadow">
