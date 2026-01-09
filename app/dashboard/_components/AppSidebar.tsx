@@ -92,8 +92,8 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
-            <SidebarFooter>
-                <div className="p-2">
+            <SidebarFooter className="group-data-[collapsible=icon]:p-0">
+                <div className="p-2 group-data-[collapsible=icon]:hidden">
                     <div className="bg-gradient-to-r from-sidebar-accent/50 to-sidebar-accent/30 rounded-lg p-4 border border-sidebar-border/50 flex flex-col gap-3 shadow-sm">
                         <div className="flex items-center gap-2">
                             <div className="bg-primary/15 p-1.5 rounded-md text-primary ring-1 ring-primary/10">
@@ -114,7 +114,7 @@ export function AppSidebar() {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 border-t border-sidebar-border/50">
+                <div className="flex items-center gap-4 p-4 border-t border-sidebar-border/50 group-data-[collapsible=icon]:p-2 group-data-[collapsible=icon]:justify-center">
                     <UserButton
                         appearance={{
                             elements: {
@@ -122,7 +122,7 @@ export function AppSidebar() {
                             }
                         }}
                     />
-                    <div className="flex flex-col flex-1 min-w-0">
+                    <div className="flex flex-col flex-1 min-w-0 group-data-[collapsible=icon]:hidden">
                         <span className="text-sm font-medium leading-none truncate">{user?.fullName}</span>
                         <span className="text-xs text-muted-foreground truncate mt-1">{user?.primaryEmailAddress?.emailAddress}</span>
                     </div>
