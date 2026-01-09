@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Titli automation",
-  description: "Titli automation",
+  title: "AI_Automation",
+  description: "AI_Automation",
 };
 
 export default function RootLayout({
